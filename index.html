@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="calc.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body>
+    
+    <form name="form_sub" action="">
+            <H3><u>Enter the following details</u>></H3>
+            FIRSTNAME: <br><input  type="text" name="firstname"><br>
+            Secondname: <br><input  type="text" name = "secondname"><br><br>
+            <!-- Sex:<br>
+                    Male: <input id="sex" type= "radio" value="male" name= "gender"><br>
+                     Female: <input id="sex" type="radio" value="male" name="gender"><br><br> -->
+                     Gender: <select name="gender" id="sex">
+                         <option value="Male" id="male">Male</option>
+                        <option value="Female" id="female">Female</option>
+                     </select>
+
+            DATE OF BIRTH: <br>
+             Day:    <input name="day" type="number" value="DD" style="width: 60px;"><br>
+             Month:  <input name="month" type="number" value="MM" style="width: 60px;"><br>
+             Year:   <input name="year" type="number" value="YY" style="width: 60px;"><br><br>
+
+     <button id="sub_button" onclick="getdetails()">Submit</button>
+    
+    </form>
+</body>
+</html>
