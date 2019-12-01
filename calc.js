@@ -50,31 +50,31 @@ function getdetails(){
         
 
     if ((ss >= 0.0 && ss < 1) && (gender == 1)) {
-        alert("How are you")
+        alert("Hello " + fulname + " you were born on a Sunday and your akan name is Kwasi");
     }   
     else if ((ss >= 0.0 && ss < 1) && (gender == 2)){
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Sunday and your akan name is Akosua");
     }
     else if ((ss >= 1.0 && ss < 2) && (gender == 1)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Monday and your akan name is Kwadwo");
     }
     else if ((ss >= 1.0 && ss < 2) && (gender == 2)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Monday and your akan name is Adwoa");
     }
     else if ((ss >= 2.0 && ss < 3) && (gender == 1)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Teusday and your akan name is Kwabena");
     }
     else if ((ss >= 2.0 && ss < 3) && (gender == 2)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Teusday and your akan name is Abenaa");
     }
     else if ((ss >= 3.0 && ss < 4) && (gender == 1)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a wednesday and your akan name is Kwaku");
     }
     else if ((ss >= 3.0 && ss < 4) && (gender == 2)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a wednesday and your akan name is Akua");
     }
     else if ((ss >= 4.0 && ss < 5) && (gender == 1)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Thursday and your akan name is Yaw");
     }
     else if ((ss >= 4.0 && ss < 5) && (gender == 2)) {
         alert("Not fine");
