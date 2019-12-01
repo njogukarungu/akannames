@@ -2,7 +2,7 @@ function getdetails(){
     // alert("How are you");
     var fname = document.forms["form_sub"]["firstname"].value;
     var sname = document.forms["form_sub"]["secondname"].value;
-    alert(fname);
+    // alert(fname);
     var day = document.forms["form_sub"]["day"].value;
     //  day = parseInt(day);
     var month  = document.forms["form_sub"]["month"].value;
@@ -11,16 +11,16 @@ function getdetails(){
     // year = parseInt(year);
     var e =     document.getElementById("sex");
     var gender = e.options[e.selectedIndex].text;
-    alert(gender);
+    // alert(gender);
 
     var hh = day.concat(month);
     var hh = hh.concat(year);
-    alert(hh);
+    // alert(hh);
      
     var cc = year.slice(0,2);
-    alert(cc);
+    // alert(cc);
     var yy = year.slice(2,4)
-    alert(yy)
+    // alert(yy)
     // day_of_birth(nj);
     // alert(nj);
 
@@ -31,21 +31,19 @@ function getdetails(){
     var mm = parseInt(month);
     var dd = parseInt(day);
     var ss1 = ((cc/4)- (2*cc-1));
-    alert(ss1);
+    // alert(ss1);
 
     var ss2 = (5*yy/4);
-    alert(ss2); 
+    // alert(ss2); 
     var ss3 = (26*(mm+1)/10);
-    alert(ss3);
+    // alert(ss3);
     var ss = ss1+ss2+ss3+dd;
     ss = ss%7;
     alert(ss);
-    var ccs = ss.slice(0,1);
-    ccs.toString();
-    alert(ccs);
-    // tofloat(ccs);
-    // alert(ccs);
+    
+    
 
+ 
 
 }
 
