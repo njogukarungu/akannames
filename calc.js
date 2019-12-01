@@ -9,10 +9,11 @@ function getdetails(){
     // month = parseInt(month);
     var year = document.forms["form_sub"]["year"].value;
     // year = parseInt(year);
-    var e =     document.getElementById("sex");
-    var gender = e.options[e.selectedIndex].text;
-    // alert(gender);
-
+    var e =     document.getElementById("gender");
+    var gender = e.options[e.selectedIndex].value;
+  
+    fulname = fname.concat(sname);
+    
     var hh = day.concat(month);
     var hh = hh.concat(year);
     // alert(hh);
@@ -41,15 +42,60 @@ function getdetails(){
     ss = ss%7;
     alert(ss);
     ss = parseFloat(ss);
+
+
+    if ((ss >= 5.0 && ss < 6) && (gender == 1)) {
+       alert("Hello " + fulname + " you were born on a wednesday and your akan name is bb");
+    } 
         
-    
-    if((ss>=5.0 && ss<6) && (gender === (document.getElementById("sex").value = "male"))){
+
+    if ((ss >= 0.0 && ss < 1) && (gender == 1)) {
         alert("How are you")
     }   
-    else{
+    else if ((ss >= 0.0 && ss < 1) && (gender == 2)){
         alert("Not fine");
     }
+    else if ((ss >= 1.0 && ss < 2) && (gender == 1)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 1.0 && ss < 2) && (gender == 2)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 2.0 && ss < 3) && (gender == 1)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 2.0 && ss < 3) && (gender == 2)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 3.0 && ss < 4) && (gender == 1)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 3.0 && ss < 4) && (gender == 2)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 4.0 && ss < 5) && (gender == 1)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 4.0 && ss < 5) && (gender == 2)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 5.0 && ss < 6) && (gender == 1)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 5.0 && ss < 6) && (gender == 2)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 6.0 && ss < 7) && (gender == 1)) {
+        alert("Not fine");
+    }
+    else if ((ss >= 6.0 && ss < 7) && (gender == 2)) {
+        alert("Not fine");
+    }
+    else{
+        alert("Enter a valid date");
+    }
 
+    
  
 
 }
