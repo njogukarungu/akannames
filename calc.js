@@ -40,8 +40,15 @@ function getdetails(){
     var ss = ss1+ss2+ss3+dd;
     ss = ss%7;
     alert(ss);
+    ss = parseFloat(ss);
+        
     
-    
+    if((ss>=5.0 && ss<6) && (gender === (document.getElementById("sex").value = "male"))){
+        alert("How are you")
+    }   
+    else{
+        alert("Not fine");
+    }
 
  
 
