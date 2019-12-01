@@ -38,9 +38,14 @@ function getdetails(){
     var ss3 = (26*(mm+1)/10);
     alert(ss3);
     var ss = ss1+ss2+ss3+dd;
-
     ss = ss%7;
     alert(ss);
+    var ccs = ss.slice(0,1);
+    ccs.toString();
+    alert(ccs);
+    // tofloat(ccs);
+    // alert(ccs);
+
 
 }
 
@@ -54,4 +59,52 @@ var nj = cc*yy;
 nj = nj.toString();
 return nj;
 
+
 }
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
