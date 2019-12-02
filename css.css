@@ -29,5 +29,6 @@ body{
     font-size: large;
 }
 .container form{
-    margin: 20px;
+    margin: 0 auto;
+    width: 70%;
 }
