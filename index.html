@@ -20,6 +20,7 @@
       var image5 = new Image()
       image5.src="images/img8.jpg"
     </script>
+    
   </head>
   <body>
     <div class="jumbotron">
@@ -53,55 +54,53 @@
             </figure>
         </div>
 
-      <div class="card">
-        
+      <div class="form_details">
         <p>
           Akan names is a Ghanian naming style system that uses a certain
           algorith to determine the day of the week that you were born. There
           are names allocated to the to both male or female depending on the day
-          you were born.
-        </p>
-        <br /><br />
+          you were born.</p>
         <h3>Fill in the following details</h3>
-        <br />
-
-        <form name="form_sub" action="">
-          <h3>
-            <u>Enter the following csscss.css.css.csscss.css.css.cssails</u>
-          </h3>
-          <!-- FIRSTNA
-            ME:<br><br> <input type="text" name="firstname"><br><br> -->
-          <!-- Secondname:<br><br> <input type="text" name="secondname"><br><br> -->
-          <input type="text" name="firstname" />
-          <input type="text" name="secondname" />
+        
+        <form name="form_sub" action="" id="personal_details">
+          <h3><u>Enter the following fields</u></h3>
+         firstname:<br>
+         <input type="text" name="firstname" required/><br><br>
+         Secondname<br>
+          <input type="text" name="secondname" required/><br><br>
           Gender:
-          <select name="gender" id="gender">
+          <select name="gender" id="gender" required>
             <option value="1" id="male">Male</option>
-            <option value="2" id="female">Female</option> </select
-          ><br /><br />
+            <option value="2" id="female">Female</option></select>
+            <br/><br/>
 
-          DATE OF BIRTH: <br />
-          Day: &nbsp;&nbsp;&nbsp;<input
-            name="day"
-            type="number"
+          DATE OF BIRTH: <br/>
+          Day: &nbsp;&nbsp;&nbsp;<input name="day" type="number" style="width: 60px;"/><br/><br/>
+          Month: <input name="month" type="number"
             style="width: 60px;"
           /><br /><br />
-          Month:
-          <input
-            name="month"
-            type="number"
-            style="width: 60px;"
-          /><br /><br />
-          Year: &nbsp;&nbsp;&nbsp;<input
-            name="year"
-            type="number"
-            style="width: 60px;"
-          /><br /><br />
-
-          <button id="sub_button" onclick="displaydata()">Submit</button>
+          Year: &nbsp;&nbsp;&nbsp;<input name="year" type="number" style="width: 60px;"><br /><br/>
+            <button id="sub_button" onclick="displaydata()">Submit</button>
         </form>
       </div>
+       <div id="footer">
+            <table class="tfooter">
+              <tr>
+                <td style="width: 30%;align-content: center; ">
+                  <a href="https://www.facebook.com/philip.njogu.3"><img src="images/img2.png" alt="A facebook link"></a>
+                </td>
+                <td style="width: 30%;align-content: center;">
+                  <a href="https://twitter.com/philip_njogu"><img src="images/img1.png" alt="A twitter link"></a>
+                </td>
+                <td style="width: 30%;align-content: center;">
+                  <a href=""><img src="images/img3.png" alt="A linkedin file"></a>
+                </td>
+              </tr>
+              
+            
+           </table>
+          </div> 
     </div>
   </body>
-  <script src="calc.js"></script>
+      <script src="calc.js"></script>
 </html>

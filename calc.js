@@ -22,12 +22,7 @@ function displaydata() {
 
   var gender = parseInt(formData.gender.value);
 
-  if(fname == null, sname == null, day == null,month, year ==null, gender ==null){
-      alert("Please fill all the requred fields");
-      return false;
-
-  }
-
+  
   var cc = parseInt(year / 100);
   var yy = year % 100;
 
@@ -120,4 +115,16 @@ function displaydata() {
   } else {
     alert("Enter a valid date");
   }
+}
+function validate(){
+ 
+  if (fname == null || sname == null || day == null ||month == null || year == null || gender == null) {
+    alert("Please fill all the requred fields");
+    return false;
+  }
+
+  if (!(1 <= day <= 31)) {
+    alert("Enter a valid date!!!");
+    return false;
+  }   
 }
