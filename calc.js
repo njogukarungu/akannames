@@ -1,159 +1,117 @@
-function getdetails(){
-    // alert("How are you");
-    var fname = document.forms["form_sub"]["firstname"].value;
-    var sname = document.forms["form_sub"]["secondname"].value;
-    // alert(fname);
-    var day = document.forms["form_sub"]["day"].value;
-    //  day = parseInt(day);
-    var month  = document.forms["form_sub"]["month"].value;
-    // month = parseInt(month);
-    var year = document.forms["form_sub"]["year"].value;
-    // year = parseInt(year);
-    var e =     document.getElementById("gender");
-    var gender = e.options[e.selectedIndex].value;
-  
-    fulname = fname.concat(sname);
-    
-    var hh = day.concat(month);
-    var hh = hh.concat(year);
-    // alert(hh);
-     
-    var cc = year.slice(0,2);
-    // alert(cc);
-    var yy = year.slice(2,4)
-    // alert(yy)
-    // day_of_birth(nj);
-    // alert(nj);
+function calculate(day, month, yy, cc) {
+  var ss1 = cc / 4 - (2 * cc - 1);
+  var ss2 = (5 * yy) / 4;
+  var ss3 = (26 * (month + 1)) / 10;
+  var ss = ss1 + ss2 + ss3 + day;
+  ss = ss % 7;
 
-
-
-    var cc = parseInt(year.slice(0, 2));
-    var yy = parseInt(year.slice(2, 4));
-    var mm = parseInt(month);
-    var dd = parseInt(day);
-    var ss1 = ((cc/4)- (2*cc-1));
-    // alert(ss1);
-
-    var ss2 = (5*yy/4);
-    // alert(ss2); 
-    var ss3 = (26*(mm+1)/10);
-    // alert(ss3);
-    var ss = ss1+ss2+ss3+dd;
-    ss = ss%7;
-    alert(ss);
-    ss = parseFloat(ss);
-
-
-    
-        
-
-    if ((ss >= 0.0 && ss < 1) && (gender == 1)) {
-        alert("Hello " + fulname + " you were born on a Sunday and your akan name is Kwasi");
-    }   
-    else if ((ss >= 0.0 && ss < 1) && (gender == 2)){
-        alert("Hello " + fulname + " you were born on a Sunday and your akan name is Akosua");
-    }
-    else if ((ss >= 1.0 && ss < 2) && (gender == 1)) {
-        alert("Hello " + fulname + " you were born on a Monday and your akan name is Kwadwo");
-    }
-    else if ((ss >= 1.0 && ss < 2) && (gender == 2)) {
-        alert("Hello " + fulname + " you were born on a Monday and your akan name is Adwoa");
-    }
-    else if ((ss >= 2.0 && ss < 3) && (gender == 1)) {
-        alert("Hello " + fulname + " you were born on a Teusday and your akan name is Kwabena");
-    }
-    else if ((ss >= 2.0 && ss < 3) && (gender == 2)) {
-        alert("Hello " + fulname + " you were born on a Teusday and your akan name is Abenaa");
-    }
-    else if ((ss >= 3.0 && ss < 4) && (gender == 1)) {
-        alert("Hello " + fulname + " you were born on a wednesday and your akan name is Kwaku");
-    }
-    else if ((ss >= 3.0 && ss < 4) && (gender == 2)) {
-        alert("Hello " + fulname + " you were born on a wednesday and your akan name is Akua");
-    }
-    else if ((ss >= 4.0 && ss < 5) && (gender == 1)) {
-        alert("Hello " + fulname + " you were born on a Thursday and your akan name is Yaw");
-    }
-    else if ((ss >= 4.0 && ss < 5) && (gender == 2)) {
-        alert("Hello " + fulname + " you were born on a Thursday and your akan name is Yaa");
-    }
-    else if ((ss >= 5.0 && ss < 6) && (gender == 1)) {
-        alert("Hello " + fulname + " you were born on a Friday and your akan name is Kofi");
-    }
-    else if ((ss >= 5.0 && ss < 6) && (gender == 2)) {
-        alert("Hello " + fulname + " you were born on a Friday and your akan name is Afua");
-    }
-    else if ((ss >= 6.0 && ss < 7) && (gender == 1)) {
-        alert("Hello " + fulname + " you were born on a Saturday and your akan name is Kwame");
-    }
-    else if ((ss >= 6.0 && ss < 7) && (gender == 2)) {
-        alert("Hello " + fulname + " you were born on a Saturday and your akan name is Ama");
-    }
-    else{
-        alert("Enter a valid date");
-    }
-
-    
- 
-
+  ss = parseInt(ss);
+  return ss;
 }
 
-function day_of_birth(nj){
-var cc = parseInt(year.slice(0,2));
-var yy = parseInt(year.slice(2,4));
-var mm = parseInt(month);
-var dd = parseInt(day);
+function displaydata() {
+  var formData = document.forms[0];
 
-var nj = cc*yy;
-nj = nj.toString();
-return nj;
+  var fname = formData.firstname.value;
+  var sname = formData.secondname.value;
+  var fullname = fname.concat(sname);
 
+  var day = parseInt(formData.day.value);
+  var month = parseInt(formData.month.value);
+  var year = parseInt(formData.year.value);
 
+  var gender = parseInt(formData.gender.value);
+
+  var cc = parseInt(year / 100);
+  var yy = year % 100;
+
+  var ss = calculate(day, month, yy, cc);
+
+  if (ss === 0 && gender == 1) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Sunday and your akan name is Kwasi"
+    );
+  } else if (ss === 0 && gender == 2) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Sunday and your akan name is Akosua"
+    );
+  } else if (ss === 1 && gender == 1) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Monday and your akan name is Kwadwo"
+    );
+  } else if (ss === 1 && gender == 2) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Monday and your akan name is Adwoa"
+    );
+  } else if (ss === 2 && gender == 1) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Teusday and your akan name is Kwabena"
+    );
+  } else if (ss === 2 && gender == 2) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Teusday and your akan name is Abenaa"
+    );
+  } else if (ss === 3 && gender == 1) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a wednesday and your akan name is Kwaku"
+    );
+  } else if (ss === 3 && gender == 2) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a wednesday and your akan name is Akua"
+    );
+  } else if (ss === 4 && gender == 1) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Thursday and your akan name is Yaw"
+    );
+  } else if (ss === 4 && gender == 2) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Thursday and your akan name is Yaa"
+    );
+  } else if (ss === 5 && gender == 1) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Friday and your akan name is Kofi"
+    );
+  } else if (ss === 5 && gender == 2) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Friday and your akan name is Afua"
+    );
+  } else if (ss === 6 && gender == 1) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Saturday and your akan name is Kwame"
+    );
+  } else if (ss === 6 && gender == 2) {
+    alert(
+      "Hello " +
+        fullname +
+        " you were born on a Saturday and your akan name is Ama"
+    );
+  } else {
+    alert("Enter a valid date");
+  }
 }
-
-
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-   
-
-
-
-
-   
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-

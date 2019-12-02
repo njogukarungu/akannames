@@ -1,53 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <script src="calc.js"></script>
-    <link rel="stylesheet" href="bo">
-<link rel="stylesheet" href="css.css">
-</head>
-<body>
+    <!-- <link rel="stylesheet" href="bo"> -->
+    <link rel="stylesheet" href="css.css" />
+
+    <script>  
+      var image1 = new Image()
+      image1.src="images/img9.jpg"  
+      var image2 = new Image()
+      image2.src="images/img10.jpg"
+      var image3 = new Image()
+      image3.src="images/img11.jpg"
+      var image4 = new Image()
+      image4.src="images/img12.jpg"
+      var image5 = new Image()
+      image5.src="images/img8.jpg"
+    </script>
+  </head>
+  <body>
     <div class="jumbotron">
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a> </li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
     </div>
 
-        <div class="container">
-            <div class = card>
-            <img src="images/Road.jpeg" alt="akanlogo">
-            <p>Akan names is a Ghanian naming style system that uses a certain algorith to determine the day of the week
-                that you were born. There are names allocated to the to both male or female depending on the day you were born. </p><br><br>
-              <h3>Fill in the following details</h3><br>
-
-            <form name="form_sub" action="">
-                <H3><u>Enter the following details</u></H3>
-                FIRSTNAME:<br><br> <input type="text" name="firstname"><br><br>
-                Secondname:<br><br> <input type="text" name="secondname"><br><br>
-               
-                Gender: <select name="gender" id="gender">
-                            <option value="1" id="male">Male</option>
-                            <option value="2" id="female">Female</option>
-                </select><br><br>
-                
-                DATE OF BIRTH: <br> 
-                Day:    &nbsp;&nbsp;&nbsp;<input name="day" type="number" value="DD" style="width: 60px;"><br><br>
-                Month:  <input name="month" type="number" value="MM" style="width: 60px;"><br><br>
-                Year:   &nbsp;&nbsp;&nbsp;<input name="year" type="number" value="YY" style="width: 60px;"><br><br>
+    <div class="container">
             
-                <button id="sub_button" onclick="getdetails()">Submit</button>
-            
-            </form>
-            </div>
+        <div id="slider">
+            <figure>
+              <div class="slide">
+                <img src="images/img9.jpg">
+              </div>
+              <div class="slide">
+                <img src="images/img10.jpg">
+              </div>
+              <div class="slide">
+                <img src="images/img11.jpg">
+              </div>
+              <div class="slide">
+                <img src="images/img12.jpg">
+              </div>
+              <div class="slide">
+                <img src="images/img8.jpg">
+              </div>         
+            </figure>
         </div>
 
+      <div class="card">
+        <img src="images/Road.jpeg" alt="akanlogo" />
+        <p>
+          Akan names is a Ghanian naming style system that uses a certain
+          algorith to determine the day of the week that you were born. There
+          are names allocated to the to both male or female depending on the day
+          you were born.
+        </p>
+        <br /><br />
+        <h3>Fill in the following details</h3>
+        <br />
 
-    </form>
-</body>
+        <form name="form_sub" action="">
+          <h3>
+            <u>Enter the following csscss.css.css.csscss.css.css.cssails</u>
+          </h3>
+          <!-- FIRSTNA
+            ME:<br><br> <input type="text" name="firstname"><br><br> -->
+          <!-- Secondname:<br><br> <input type="text" name="secondname"><br><br> -->
+          <input type="text" name="firstname" />
+          <input type="text" name="secondname" />
+          Gender:
+          <select name="gender" id="gender">
+            <option value="1" id="male">Male</option>
+            <option value="2" id="female">Female</option> </select
+          ><br /><br />
+
+          DATE OF BIRTH: <br />
+          Day: &nbsp;&nbsp;&nbsp;<input
+            name="day"
+            type="number"
+            style="width: 60px;"
+          /><br /><br />
+          Month:
+          <input
+            name="month"
+            type="number"
+            style="width: 60px;"
+          /><br /><br />
+          Year: &nbsp;&nbsp;&nbsp;<input
+            name="year"
+            type="number"
+            style="width: 60px;"
+          /><br /><br />
+
+          <button id="sub_button" onclick="displaydata()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="calc.js"></script>
 </html>
