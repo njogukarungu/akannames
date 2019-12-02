@@ -10,17 +10,17 @@ function calculate(day, month, yy, cc) {
 }
 
 function displaydata() {
-  var formData = document.forms[0];
+//   var formData = document.forms[0];
 
-  var fname = formData.firstname.value;
-  var sname = formData.secondname.value;
-  var fullname = fname.concat(sname);
+//   var fname = formData.firstname.value;
+//   var sname = formData.secondname.value;
+//   var fullname = fname.concat(sname);
 
-  var day = parseInt(formData.day.value);
-  var month = parseInt(formData.month.value);
-  var year = parseInt(formData.year.value);
+//   var day = parseInt(formData.day.value);
+//   var month = parseInt(formData.month.value);
+//   var year = parseInt(formData.year.value);
 
-  var gender = parseInt(formData.gender.value);
+//   var gender = parseInt(formData.gender.value);
 
   
   var cc = parseInt(year / 100);
