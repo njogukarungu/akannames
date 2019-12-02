@@ -1,7 +1,9 @@
+body{
+    background-color: rgb(15, 15, 63);
+}
 .jumbotron{
     height: 80px;
-    background-image: image();
-    background: rgb(109, 10, 10);
+    background-color: rgb(27, 15, 15);
 }
 .navbar ul{
     float: right;
@@ -15,5 +17,17 @@
     width: 80%;
     margin: 0 auto;
     height: 1200px;
-    background-color: blueviolet;
+    background-color:grey;
+}
+.container img{
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+}
+.container p {
+    padding: 10px;
+    font-size: large;
+}
+.container form{
+    margin: 20px;
 }
