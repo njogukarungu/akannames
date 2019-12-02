@@ -44,9 +44,7 @@ function getdetails(){
     ss = parseFloat(ss);
 
 
-    if ((ss >= 5.0 && ss < 6) && (gender == 1)) {
-       alert("Hello " + fulname + " you were born on a wednesday and your akan name is bb");
-    } 
+    
         
 
     if ((ss >= 0.0 && ss < 1) && (gender == 1)) {
@@ -77,19 +75,19 @@ function getdetails(){
         alert("Hello " + fulname + " you were born on a Thursday and your akan name is Yaw");
     }
     else if ((ss >= 4.0 && ss < 5) && (gender == 2)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Thursday and your akan name is Yaa");
     }
     else if ((ss >= 5.0 && ss < 6) && (gender == 1)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Friday and your akan name is Kofi");
     }
     else if ((ss >= 5.0 && ss < 6) && (gender == 2)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Friday and your akan name is Afua");
     }
     else if ((ss >= 6.0 && ss < 7) && (gender == 1)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Saturday and your akan name is Kwame");
     }
     else if ((ss >= 6.0 && ss < 7) && (gender == 2)) {
-        alert("Not fine");
+        alert("Hello " + fulname + " you were born on a Saturday and your akan name is Ama");
     }
     else{
         alert("Enter a valid date");
